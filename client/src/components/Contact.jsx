@@ -1,5 +1,5 @@
 function Contact() {
-  return <h1>Contact Component</h1>;
+  return null;
 }
 
 export default Contact;

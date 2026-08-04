@@ -1,5 +1,5 @@
 function About() {
-  return <h1>About Component</h1>;
+  return null;
 }
 
 export default About;
