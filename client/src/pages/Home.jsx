@@ -19,12 +19,10 @@ function Home() {
       <HowItWorks/>
       <UseCases/>
       <Testimonials/>
+      <About/>
+      <Contact/>
       <FAQ/>
       <CTA/>
-      <About />
-      <Contact />
-      
-      
       <Footer />
     </>
   );
