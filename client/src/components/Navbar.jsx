@@ -1,67 +1,73 @@
 import { motion } from "framer-motion";
-import logo from "../assets/logo/logo.png";
-
-const navItems = ["Home", "Features", "About", "Contact"];
 
 function Navbar() {
   return (
     <motion.nav
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7 }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-7xl"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="fixed left-1/2 top-4 z-50 w-[92%] max-w-7xl -translate-x-1/2"
     >
-      <div className="relative flex h-[78px] items-center justify-between rounded-[26px] border border-white/80 bg-white/85 px-8 backdrop-blur-xl shadow-[0_20px_60px_rgba(15,23,42,.08)]">
+      <div className="flex items-center justify-between rounded-3xl border border-white/70 bg-white/80 px-8 py-4 shadow-[0_15px_40px_rgba(37,99,235,0.10)] backdrop-blur-xl">
 
         {/* Logo */}
-        <motion.div
-          whileHover={{ scale: 1.02 }}
-          className="flex items-center gap-3 cursor-pointer"
+
+        <a
+          href="/"
+          className="text-2xl font-bold text-slate-900"
         >
-          <img
-            src={logo}
-            alt="LegalEase AI"
-            className="h-14 w-14 object-contain"
-          />
+          LegalEase{" "}
+          <span className="text-blue-600">AI</span>
+        </a>
 
-          <div>
-            <h1 className="text-[26px] font-bold tracking-tight text-slate-900">
-              LegalEase
-              <span className="text-blue-600"> AI</span>
-            </h1>
-
-            <p className="text-[11px] text-slate-500">
-              AI Powered Legal Assistant
-            </p>
-          </div>
-        </motion.div>
 
         {/* Navigation */}
-        <ul className="hidden lg:flex items-center gap-12">
-          {navItems.map((item) => (
-            <motion.li
-              key={item}
-              whileHover={{ y: -2 }}
-              className="group relative cursor-pointer font-medium text-slate-700 transition"
-            >
-              {item}
 
-              <span className="absolute -bottom-2 left-0 h-[2px] w-0 rounded-full bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-            </motion.li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-8">
 
-        {/* Button */}
-        <motion.button
-          whileHover={{
-            scale: 1.04,
-            y: -2,
-          }}
-          whileTap={{ scale: 0.96 }}
-          className="rounded-xl bg-slate-900 px-7 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
-        >
-          Get Started →
-        </motion.button>
+          {/* Home */}
+
+          <a
+            href="/"
+            className="font-medium text-slate-700 transition hover:text-blue-600"
+          >
+            Home
+          </a>
+
+
+          {/* Login */}
+
+          <a
+            href="/login"
+            className="font-medium text-slate-700 transition hover:text-blue-600"
+          >
+            Login
+          </a>
+
+
+          {/* Register */}
+
+          <a
+            href="/register"
+            className="font-medium text-slate-700 transition hover:text-blue-600"
+          >
+            Register
+          </a>
+
+
+          {/* Get Started */}
+
+          <motion.a
+            href="/register"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.97 }}
+            className="rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:shadow-xl"
+          >
+            Get Started →
+          </motion.a>
+
+        </div>
+
       </div>
     </motion.nav>
   );
