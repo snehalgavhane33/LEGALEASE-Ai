@@ -13,6 +13,7 @@ function HeroContent() {
 
       <div className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/70 px-5 py-2 backdrop-blur-xl shadow-lg">
         <Sparkles size={16} className="text-blue-600" />
+
         <span className="text-sm font-semibold text-blue-700">
           AI Powered Legal Assistant
         </span>
@@ -23,6 +24,7 @@ function HeroContent() {
       <h1 className="mt-7 text-[58px] font-extrabold leading-[1.02] tracking-[-2px] text-slate-900">
         Understand Legal
         <br />
+
         <span className="bg-gradient-to-r from-blue-700 via-sky-500 to-cyan-500 bg-clip-text text-transparent">
           Documents
         </span>{" "}
@@ -44,12 +46,20 @@ function HeroContent() {
 
         <div className="mt-7 flex gap-4">
 
-          <button className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 font-semibold text-white shadow-lg">
+          {/* Upload Document */}
+          <a
+            href="/dashboard"
+            className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+          >
             <Upload size={18} />
             Upload Document
-          </button>
+          </a>
 
-          <button className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3 font-semibold text-slate-700">
+          {/* Watch Demo */}
+          <button
+            type="button"
+            className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3 font-semibold text-slate-700 transition duration-300 hover:-translate-y-1 hover:shadow-md"
+          >
             <Play size={18} />
             Watch Demo
           </button>
@@ -57,10 +67,6 @@ function HeroContent() {
         </div>
 
       </motion.div>
-
-      {/* Stats */}
-
-        
 
     </motion.div>
   );

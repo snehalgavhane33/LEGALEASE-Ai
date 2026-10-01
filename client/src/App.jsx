@@ -2,6 +2,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import Analysis from "./pages/Analysis";
 
 function App() {
   const path = window.location.pathname;
@@ -16,6 +17,10 @@ function App() {
 
   if (path === "/dashboard") {
     return <Dashboard />;
+  }
+
+  if (path === "/analysis") {
+    return <Analysis />;
   }
 
   return <Home />;
